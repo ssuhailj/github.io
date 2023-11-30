@@ -249,3 +249,49 @@ h6,
 .blog-item:hover img {
   transform: scale(1.1);
 }
+
+/* Button Overlay Section Start */
+.container {
+  position: relative;
+  height: 100%;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0);
+  transition: background 0.5s ease;
+}
+
+.container:hover .overlay {
+  display: block;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.button {
+  transform: translate(-50%, -50%);
+  position: absolute;
+  display: flex;
+  left: 50%;
+  top: 50%;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  width: 100px;
+}
+
+.button a {
+  width: 200px;
+  padding: 8px 36px;
+  text-align: center;
+  color: white;
+  border: solid 2px white;
+  z-index: 1;
+}
+
+.container:hover .button {
+  opacity: 1;
+}
+/* Button Overlay Section End */
